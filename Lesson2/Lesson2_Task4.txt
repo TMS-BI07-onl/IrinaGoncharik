@@ -1,0 +1,45 @@
+/*
+Решите на базе данных AdventureWorks2017 следующие задачи:
+Сколько уникальных PersonType существует для людей из Person.Person с LastName начинающиеся с буквы М или не содержащий 1 в EmailPromotion.
+*/
+SELECT COUNT (DISTINCT PersonType) as PT
+FROM Person.Person
+WHERE LastName = 'M%'
+		OR EmailPromotion != 1
+
+
+/*
+Вывести первых 3 специальных предложений из Sales.SpecialOffer с наибольшими DiscountPct, которые начинали действовать с 2013-01-01 по 2014-01-01.
+*/
+
+SELECT TOP(3) MAX(DiscountPct), StartDate, EndDate
+FROM Sales.SpecialOffer
+Where StartDate >= '2013-01-01' AND EndDate <= '2014-01-01'
+GROUP BY StartDate, EndDate
+
+
+/*
+Найти самый минимальный вес и самый максимальный размер продукта из Production.Product.
+*/
+SELECT MIN(Weight) AS Weight, MAX(Size) AS Size
+FROM Production.Product
+
+
+
+/*
+Найти самый минимальный вес и самый максимальный размер продукта для каждой подкатегории ProductSubcategoryID из Production.Product. 
+*/
+SELECT MIN(Weight) AS Weight, MAX(Size) AS Size, ProductSubcategoryID
+FROM Production.Product
+GROUP BY ProductSubcategoryID
+
+
+/*
+Найти самый минимальный вес и самый максимальный размер продукта для каждой подкатегории ProductSubcategoryID из Production.Product, где цвет продукта определен(Color).
+*/
+SELECT MIN(Weight) AS Weight, MAX(Size) AS Size, ProductSubcategoryID, Color
+FROM Production.Product
+WHERE Color IS NOT NULL
+GROUP BY ProductSubcategoryID, Color
+
+

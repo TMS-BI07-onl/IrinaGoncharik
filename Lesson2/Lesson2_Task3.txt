@@ -1,0 +1,16 @@
+Aggregate functions:
+
+APPROX_COUNT_DISTINCT, AVG, CHECKSUM_AGG, COUNT, COUNT_BIG, GROUPING, GROUPING_ID, MAX, MIN, STDEV, STDEVP, STRING_AGG, SUM, VAR, VARP
+
+Example 1. The average tax rate is calculated:
+
+SELECT AVG([SalesTaxRateID]) as [SalesTaxRateID]
+FROM Sales.SalesTaxRate
+
+
+Example 2 count how many times SalesQuota = 250000 repeats:
+
+
+SELECT COUNT(SalesQuota) as SQT
+FROM [Sales].[SalesPerson]
+WHERE SalesQuota = 250000
