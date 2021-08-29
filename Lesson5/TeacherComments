@@ -1,0 +1,10 @@
+Well done!
+
+7.
+Pay attention to task. First name can be NULL.
+Once again, temperature can't be int :)
+
+12.
+In this task it was meant to add parameters not to replace the getdate, but to replace the bigger part of code, for example DATEDIFF(month, 0, @Date).
+
+Mark: 10.
