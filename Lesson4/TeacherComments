@@ -1,0 +1,30 @@
+Well done!
+
+3. -1
+Where is the answer?
+
+4.
+b)
+In this task there was no requirements to create new table. 
+You can insert multiple rows by having it divided by comma, like this:
+INSERT INTO Production.UnitMeasure
+VALUES 
+('TT1', 'Test1', '2020-09-09'),
+('TT2','Test2',GETDATE())
+
+c)-0.25
+I don't see the creation of UnitMeasureTest here.
+Yes, "ordered rows" means you need to use order by.
+SELECT *			
+FROM Production.UnitMeasureTest
+ORDER BY UnitMeasureCode
+
+f)-0.5
+Row_number is not the best option here. For generating "list of best..." it's better to use rank or dense_rank.
+I expected using ISNULL function for TerritoryGroup for replacing nulls.
+...CONCAT(UPPER(LEFT(LastName, 3)), 'login', ISNULL(TerritoryGroup, ''))AS [login]...
+
+g)-0.5
+You need to have one code for all options. You can't manually edit it for every result. Use case to check the condition.
+
+Mark: 8-3
