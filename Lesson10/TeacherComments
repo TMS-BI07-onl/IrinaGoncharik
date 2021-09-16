@@ -1,0 +1,7 @@
+Well done!
+
+-2
+You got wrong result because of distinct in the inner query. It will filter out all rows from one month one year with same orderQty. Why should we use distinct?
+
+Mark: 8
+Test mark: 7
