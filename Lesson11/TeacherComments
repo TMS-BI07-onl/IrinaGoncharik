@@ -1,0 +1,13 @@
+Well done!
+
+Homework
+-3
+Why count is varchar column?
+Insert is working correctly. The problem is in update statement. You need to add +1 at every match and you are just have permanent value 1 (even updating every time).
+StudentName appears in the table because of incorrect import. It's a column name, not  a value.
+
+Test
+????
+
+Mark: 7
+Test: 0
