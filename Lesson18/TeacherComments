@@ -1,0 +1,16 @@
+Well done!
+
+2. Min salary is also supposed to be calculated without commision_pct.
+
+3. a) You didn't add a column name in the order by section.
+
+4. The task was to calcualate the difference between two avg's.
+
+5. -1.5
+You have the whole job_history table for this purpose.
+
+6. It's not pretty at all to have big range in the IN. Better use <,> or BETWEEN.
+
+Total: almostly correct, but a list of small comments. Seems, that it's not a good idea to solve tasks after the lesson. :)
+
+Mark: 9  
